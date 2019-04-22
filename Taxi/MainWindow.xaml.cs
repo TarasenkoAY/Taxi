@@ -18,11 +18,19 @@ namespace Taxi
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, IView
     {
         public MainWindow()
         {
             InitializeComponent();
+            new Presenter(this);
         }
+
+
+
+        ComboBox IView.DistanceFrom { get => DistanceFrom; set => DistanceFrom = value; }
+        ComboBox IView.DistanceTo { get => DistanceTo; set => DistanceTo = value; }
+
+
     }
 }

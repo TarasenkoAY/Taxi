@@ -4,9 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Taxi"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Taxi GaLeRkA" Height="450" Width="650">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="68*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="223*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="99,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Grid.ColumnSpan="3"/>
+        <Label Content="Your name:" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top" Width="84"/>
+
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="215,9,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="218" Grid.Column="2"/>
+        <Label Content="Your phone:" HorizontalAlignment="Left" Margin="126,6,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <Label Content="From:" HorizontalAlignment="Left" Margin="10,34,0,0" VerticalAlignment="Top" Width="84"/>
+        <Label Content="To:" HorizontalAlignment="Left" Margin="126,34,0,0" VerticalAlignment="Top" Width="84" Grid.Column="2"/>
+        <ComboBox x:Name="DistanceFrom"  Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="99,36,0,0" VerticalAlignment="Top" Width="218"/>
+        <ComboBox x:Name="DistanceTo" HorizontalAlignment="Left" Margin="215,36,0,0" VerticalAlignment="Top" Width="218" Grid.Column="2"/>
+
+
+
     </Grid>
 </Window>
